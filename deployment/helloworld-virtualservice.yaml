@@ -1,0 +1,22 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: helloworld-route
+  namespace: default
+spec:
+  hosts:
+    - "*"  # or your domain like "yourdomain.com"
+  gateways:
+    - istio-system/main-gateway
+  http:
+    - match:
+        - uri:
+            prefix: /helloworld
+      rewrite:
+        uri: /  # so the app receives path as `/` instead of `/helloworld`
+      route:
+        - destination:
+            host: helloworld.default.svc.cluster.local
+            port:
+              number: 80
+
