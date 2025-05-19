@@ -5,7 +5,7 @@ metadata:
   namespace: istio-system
 spec:
   hosts:
-    - cloud.ouludatalab.fi
+    - *
   gateways:
     - istio-ingressgateway
   http:
