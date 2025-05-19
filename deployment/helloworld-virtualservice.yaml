@@ -4,8 +4,6 @@ metadata:
   name: helloworld
   namespace: istio-system
 spec:
-  gateways:
-    - istio-system/istio-ingressgateway
   http:
     - match:
         - uri:
