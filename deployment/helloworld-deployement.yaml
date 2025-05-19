@@ -14,7 +14,7 @@ spec:
         app: helloworld
     spec:
       containers:
-      - image: <image link>
+      - image: ghcr.io/karikolehmainen/helloworld:latest
         name: helloworld
         ports:
         - containerPort: 80
