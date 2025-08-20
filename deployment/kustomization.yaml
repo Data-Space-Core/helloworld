@@ -1,0 +1,4 @@
+resources:
+  - helloworld-deployment.yaml
+  - helloworld-service.yaml
+  - helloworld-virtualservice.yaml
